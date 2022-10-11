@@ -32,10 +32,7 @@ class MyCarousel extends React.Component {
         return (
             <Carousel stopOnHover={false} autoPlay={true} interval={3000} infiniteLoop={true} showStatus={false} showIndicator={false} showThumbs={false} centerMode={true} centerSlidePercentage={100}>
                 <div>
-                    <img alt="piano" src={require("./piano.jpeg")} style={imgstyle}/>
-                </div>
-                <div>
-                    <img alt="shelf" src={require("./shelf.jpeg")} style={imgstyle}/>
+                    <img alt="piano" src={require("./piano.png")} style={imgstyle}/>
                 </div>
                 <div>
                     <img alt="plane" src={require("./plane.jpg")} style={imgstyle}/>

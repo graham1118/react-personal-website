@@ -22,10 +22,10 @@ export default class Navbar extends Component {
 					<button className="nav"><Link className="nav" to="text" offset={60} smooth={true} duration={500}>About Me</Link></button>
 					
 					<button className="nav"><Link className="nav" to="bottom" smooth={true} duration={500}>Contact</Link></button>
-					<a href="https://www.github.com/graham1118">
+					<a href="https://www.github.com/graham1118" target="_blank">
 						<button className="nav" type="button">Github</button>
 					</a>
-					<a href={require("./Graham_Shunk_Resume.pdf")}>
+					<a href="https://drive.google.com/file/d/1kNzA45lL7RDXJxJ01a6S9G0On1l2p-9R/view?usp=sharing" target="_blank">
 						<button className="nav" type="button">Resume</button>
 					</a>
 				</ul>
