@@ -19,9 +19,9 @@ export default class Navbar extends Component {
 			<nav className="NavbarItems">
 				<ul>
 					<button className="nav"><Link className="nav" to="home" smooth={true} duration={500}>Home</Link></button>
-					<button className="nav"><Link className="nav" to="text" offset={60} smooth={true} duration={500}>About Me</Link></button>
+					<button className="nav"><Link className="nav" to="text" offset={100} smooth={true} duration={500}>About</Link></button>
 					
-					<button className="nav"><Link className="nav" to="bottom" smooth={true} duration={500}>Contact</Link></button>
+					<button className="nav"><Link className="nav" to="bottom" smooth={true} offset={60} duration={500}>Email</Link></button>
 					<a href="https://www.github.com/graham1118" target="_blank">
 						<button className="nav" type="button">Github</button>
 					</a>

@@ -1,0 +1,6 @@
+.slide-in {
+	position: relative;
+	left: 1000px;
+	transition-property: left;
+	transition-duration: 2s;
+}

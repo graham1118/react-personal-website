@@ -23,7 +23,7 @@
   color: white;
   position: relative;
   font-family: Inconsolata;
-  left:360px;
+  left:326px;
   top: 15px;
 }
 
@@ -32,7 +32,7 @@
   top: 0;
   width: 700px;
   right: 0;
-  left: 800px;
+  left: 820px;
 }
 
 .intro {
@@ -43,6 +43,13 @@
   vertical-align: middle;
 }
 
+.cowboy {
+  height: 90px;
+  width: auto;
+  position: relative;
+  left: 175px;
+  top: 243px;
+}
 .Graham {
   color: white;
   font-family: Archivo Black;
@@ -50,6 +57,7 @@
   position: relative;
   top: 100px;
   left: 400px;
+  z-index: 2;
 }
 
 .ityped {
@@ -58,6 +66,7 @@
   position: relative;
   top: 100px;
   left: 397px;
+  z-index: 2;
 
   background-color: red;
   background-image: linear-gradient(45deg, #f3ec78, #af4261);
@@ -151,7 +160,7 @@
   font-size: 40px;
   text-align: right;
 
-  padding-bottom: 42px;
+  padding-bottom: 112px;
   background-color: red;
   background-image: linear-gradient(45deg, #f3ec78, #af4261);
   background-size: 100%;
@@ -165,7 +174,7 @@
 
 
 .listyle2 {
-  padding-bottom: 10px;
+  padding-bottom: 80px;
 }
 
 .pilot {
@@ -180,7 +189,7 @@
   height: 650px;
   width: 100%;
   position: relative;
-  bottom: 20px;
+  top: 330px;
 }
 .carousel {
   position: relative;

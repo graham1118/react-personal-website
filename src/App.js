@@ -1,8 +1,8 @@
 import './App.css';
+import SlideIn from './SlideIn.js';
 import Navbar from "./Navbar.js"
 import {init} from 'ityped'
-import React from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import React, {useState, useEffect} from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
@@ -46,11 +46,14 @@ class MyCarousel extends React.Component {
 };
 
 export default function App() { //only expressions, functions, or classes are allowed with default
+  const [startAnimation, setStartAnimation] = useState(false);
+  useEffect(() => setStartAnimation(!startAnimation), []);
+
   return(
     <div className='App'>
       <div className="home">
         <div className="intro">
-          <h1 className="Graham"> I'm Graham, the</h1>
+          <h1 className="Graham"> I'm Graham: </h1>
         </div>
         <div className="intro"><Hello/></div>
 
@@ -59,7 +62,10 @@ export default function App() { //only expressions, functions, or classes are al
           <Navbar />
         </div>
         
-        <img className="rocket" alt="rocket at night" src={require("./rocket.png")}/>
+        <SlideIn startAnimation={startAnimation}>        
+          <img className="cowboy" alt="cowboy Graham" src={require("./cowboy.png")}/>
+          <img className="rocket" alt="rocket at night" src={require("./rocket.png")}/>
+        </SlideIn>
         
         <h1 className="quote">
             A Capacity for Adaptation is the Greater part of Sanity
@@ -74,15 +80,15 @@ export default function App() { //only expressions, functions, or classes are al
         I've worked as an independent developer, researcher, and ML consultant, but what matters is my ability to adapt 
         to whatever role I am placed in. Working as a programmer is the next experience I want to explore!</p>
 
-        <h2 className="text2">I'm a jack of all trades yet a specialist. <i>Everything</i> I do is about space</h2>
+        <h2 className="text2">I'm a jack of all trades yet a specialist. <i>Everything</i> I do is about space.</h2>
         <div className="list-container">
           <div className="list-child">
             <div className="list-titles">
               <ul style={{listStyle: "none"}}>
                 <li className="listyle1">Developer</li>
                 <li className="listyle1">Engineer</li>
-                <li className="listyle1">Consultant</li>
                 <li className="listyle1">Pilot</li>
+                <li className="listyle1">Consultant</li>
                 <li className="listyle1">Pianist</li>
               </ul>
             </div>
@@ -99,11 +105,11 @@ export default function App() { //only expressions, functions, or classes are al
           <div className="list-child">
             <div className="list-descriptions">
               <ul style={{listStyle: "none"}}>
-                <li className="listyle2">As a natural problem solver and puzzler, I am passionate about coding. <br/>I just started working at a computational plasma physics lab at my <br/>university, expanding my programmatic repotoire.</li>
-                <li className="listyle2">From Legos to high powered rocketry and everything in between, <br/>my 1st core passion is building. My end goal is to build technologies that <br/>help humans get to Mars, and I've a particular interest in propulsion.</li>
-                <li className="listyle2">Understanding how businesses work gives me the know-how start my own. <br/>This summer, I learned the ropes at AI & Robotics Estonia, <br/>an ML consulting firm.</li>
+                <li className="listyle2">As a natural problem solver and puzzler, I am passionate about coding. <br/>I just started training at a computational plasma physics lab at my <br/>university, expanding my programmatic repotoire.</li>
+                <li className="listyle2">From Legos to high powered rocketry and everything in between, <br/>my 1st core passion is building, with a particular interest in AI with applications <br/>in Space. My end goal is to build technologies that help humans get to Mars.</li>
                 <li className="listyle2">Adventure and exploration is my 2nd core passion, and scraping the <br/>atmosphere is a good bit on the way to becoming an astronaut. <br/>I started flying with the Civil Air Patrol as an emergency rescue pilot in 2020.</li>
-                <li className="listyle2">Someone's got to provide entertainment on Mars! I've been playing <br/>Chopin etudes and Rachmanninof convertos for 18 years, and although this <br/>may not seem to fit with the rest of my skills, piano is core to who I am.</li>
+                <li className="listyle2">Understanding how businesses work gives me the know-how start my own. <br/>This summer, I learned the ropes at AI & Robotics Estonia, <br/>an ML consulting firm.</li>
+                <li className="listyle2">Someone's got to provide entertainment on Mars! I've been playing <br/>Chopin etudes and Rachmanninof concertos for 18 years, and although this <br/>may not seem to fit with the rest of my skills, piano is core to who I am.</li>
               </ul>
             </div>
           </div>
