@@ -9,15 +9,17 @@
 
 :root {
   background-color: white;
+  overflow-x: hidden;
 }
 
 .App {
-  max-width: 100%;
-  overflow-x: hidden;
+  max-width: auto;
+  max-height: 100vh;
 }
 
 .home {
   background-color: black;
+  
 }
 .madeBy {
   color: white;
@@ -98,7 +100,7 @@
 .quote {
   font-family: Archivo Black;
   font-size: 40px;
-  position: relative;
+  position: absolute;
   padding-left: 100px;
   bottom: 20px;
 
